@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<!-- Bret Dixon A00997869-->
+<!-- ACIT 1620 Midterm-->
+
+<html>
+    <head>
+        <title>Brett Dixon's Midterm</title>
+    </head>
+    
+    <style>
+        #body{
+            margin:0;
+        }
+        
+        #topright{
+            position:fixed;
+            top:10px;
+            right:10px;
+        }
+        
+        .hspacer{
+            display:inline-block;
+            vertical-align:top;
+            width:5vw;
+        }
+        
+        #gear{
+            width:25px;
+            height:auto;
+        }
+        
+        #top{
+            height:23vh;
+            width:95vw;
+        }
+        
+        #middle{
+            height:50vh;
+            width:95vw;
+        }
+        
+        #bottom{
+            height:23vh;
+            width:95vw;
+        }
+        
+        .herothumb{
+            display:inline-block;
+            vertical-align:top;
+            height:95%;
+            width:auto;
+            border-radius:50%;
+        }
+        
+        #heroimg{
+            display:inline-block;
+            vertical-align:top;
+            height:100%;
+            width:20vw;
+            background-image:url(q.jpg);
+            background-size:cover;
+            background-position:top center;
+        }
+        
+        #herobio{
+            display:inline-block;
+            vertical-align:top;
+            width:70vw;
+            height:100%;
+        }
+        
+        #herotitle{
+            font-size:3vw;
+        }
+        
+        #heroinfo{
+            font-size:1.5vw;
+        }
+        
+        #inputblock{
+            display:none;
+            position:fixed;
+            top:20px;
+            right:10px;
+            width:30vw;
+            height:60vh;
+            background-color:gainsboro;
+            margin:5%;
+        }
+        
+        #inputtop{
+            position:relative;
+            top:10px;
+        }
+        
+        #inputbottom{
+            display:block;    
+        }
+        
+        .extrainput{
+            width:90%;
+            
+        }
+        
+        .extraimg{
+            display:inline-block;
+            vertical-align:top;
+            width:45%;
+            height:auto;
+        }
+        
+        #customimg{
+            position:absolute;
+            right:5%;
+            bottom:5%;
+            font-size:1.5vw;
+            background-color: darkgray;
+        }
+        
+        #custominput{
+            display:none;
+            width:90%;
+        }
+
+     
+    </style>
+    
+    <body>
+                
+        <div id='top'>
+            <img id='one' class='herothumb' src='1.jpg'/>
+            <div class='hspacer'></div>
+            <img id='two' class='herothumb' src='2.jpg'/>
+            <div class='hspacer'></div>
+            <img id='three' class='herothumb' src='3.jpg'/>
+            <div class='hspacer'></div>
+            <img id='four' class='herothumb' src='4.jpg'/>
+        </div>
+        
+        <div id='middle'>
+            <div id='heroimg'></div>
+            <div id='herobio'>
+                <div id='herotitle'>Title For the image</div>
+                <div id='heroinfo'>
+                        Description for the image. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Proin elementum aliquam ipsum, quis varius nunc fringilla ut. Nam suscipit vestibulum
+                        tortor, vel pharetra elit ultricies nec. In id arcu sollicitudin, porta orci in, euismod
+                        sem. Sed nec nibus elit. Nunc ut lacinia nisi, sit amet facilisis mi. Nam maximus
+                        lacus turpis, vitae scelerisque lectus sagittis a. Donec leo nulla, pretium at
+                        tristique et, sodales eu arcu. In hac habitasse platea dictumst. Nam nibus in
+                        magna vitae lobortis. Aenean fringilla metus quis sagittis lacinia. Nulla sed nulla
+                        ecitur, dictum magna ac, interdum neque. Pellentesque mattis a augue vel ullamcorper.
+                        Nunc sit amet erat cursus, rutrum eros at, commodo ex.
+                </div>            
+            </div>        
+        </div>
+        
+        <div id='bottom'>
+            <img id='five' class='herothumb' src='5.jpg'/>
+            <div class='hspacer'></div>
+            <img id='six' class='herothumb' src='6.jpg'/>
+            <div class='hspacer'></div>
+            <img id='seven' class='herothumb' src='7.jpg'/>
+            <div class='hspacer'></div>
+            <img id='eight' class='herothumb' src='8.jpg'/>        
+        </div>
+        
+        <div id="topright">
+            <img id='gear' src='gear.png'/>
+        </div>
+        
+        <div id='inputblock'>
+            <div id='inputtop'>
+                <center>
+                    <img id='nine' class='extraimg' src='9.jpg'/>
+                    <img id='ten' class='extraimg' src='10.jpg'/>
+                </center>    
+            </div>
+            <div id='inputbottom'>
+                <br>
+                <center><input id="titleinput" class="extrainput" placeholder="Text Input for title"/></center>
+                <br>
+                <center><input id="descripinput" class="extrainput" placeholder="Text Input for description"/></center>
+                <br>
+                <center><input id="custominput" placeholder="Custom Image URL"/></center>
+                <br>
+                <button id="customimg">Custom Image</button>
+            </div>                          
+        </div>
+            
+        
+        <script>
+            var oneImg = document.getElementById('one');
+            var twoImg = document.getElementById('two');
+            var threeImg = document.getElementById('three');
+            var fourImg = document.getElementById('four');
+            var fiveImg = document.getElementById('five');
+            var sixImg = document.getElementById('six');
+            var sevenImg = document.getElementById('seven');
+            var eightImg = document.getElementById('eight');
+            var heroImg = document.getElementById('heroimg');
+            var heroTitle = document.getElementById('herotitle');
+            var heroInfo = document.getElementById('heroinfo');
+            var gearImg = document.getElementById('gear');
+            var nineImg = document.getElementById('nine');
+            var tenImg = document.getElementById('ten');
+            var inputTitle = document.getElementById('titleinput');
+            var inputDesc = document.getElementById('descripinput');
+            var inputBlock = document.getElementById('inputblock');
+            var topDiv = document.getElementById('top');
+            var botDiv = document.getElementById('bottom');
+            var cusBut = document.getElementById('customimg');
+            var cusInput = document.getElementById('custominput');
+            
+            oneImg.onclick = function(){
+                heroImg.style.backgroundImage = "url("+ oneImg.src +")";
+                heroTitle.innerHTML = "Black Panther";
+                heroInfo.innerHTML = "The Black Panther (T'Challa) is a fictional superhero appearing in American comicbooks published by Marvel Comics. Created by writer-editor Stan Lee and penciller and co-plotter Jack Kirby, he first appeared in Fantastic Four #52 (July 1966). He is the first black superhero in mainstream American comics, debuting years before such early African-American superheroes as Marvel Comics' the Falcon (1969) and Luke Cage (1972), and DC Comics' Green Lantern John Stewart (1971), Tyroc (1976), and Black Lightning (1977). The character is usually depicted as the king and protector of Wakanda, a fictional African nation. Chadwick Boseman portrays the Black Panther in Captain America: Civil War (2016) and is set to return in Black Panther (2018), both set in the Marvel Cinematic Universe.";
+            }
+            
+            twoImg.onclick = function(){
+                heroImg.style.backgroundImage = "url("+ twoImg.src +")";
+                heroTitle.innerHTML = "Doctor Strange";
+                heroInfo.innerHTML = "Dr. Stephen Vincent Strange, also known as Doctor Strange, is a fictional superhero appearing in American comic books published by Marvel Comics. Created by artist and character conceptualist Steve Ditko, the character first appeared in Strange Tales #110 (cover-dated July 1963). A former neurosurgeon, Strange serves as the Sorcerer Supreme, the primary protector of Earth against magical and mystical threats. Debuting in the Silver Age of comics, the character has been featured in several comic book series and adapted in a variety of media including video games, an animated television show, and films. Inspired by storytellings of black magic and Chandu the Magician, Strange was created to bring a different kind of character and themes of mysticism to Marvel Comics.";
+            }
+            
+            threeImg.onclick = function(){
+                heroImg.style.backgroundImage = "url("+ threeImg.src +")";
+                heroTitle.innerHTML = "She-Hulk";
+                heroInfo.innerHTML = "She-Hulk (Jennifer Walters) is a fictional character appearing in American comic books published by Marvel Comics. Created by writer Stan Lee and artist John Buscema, she first appeared in Savage She-Hulk #1 (February 1980). A cousin to Dr. Bruce Banner, Walters once received an emergency blood transfusion from him when she was wounded, which led to her acquiring a milder version of his Hulk condition. As such, Walters becomes a large powerful green-hued version of herself while still largely retaining her personality; in particular she retains her intelligence and emotional control, though like Hulk, she still becomes stronger if enraged. In later issues, her transformation is permanent.";
+            }
+            
+            fourImg.onclick = function(){
+                heroImg.style.backgroundImage = "url("+ fourImg.src +")";
+                heroTitle.innerHTML = "Thor";
+                heroInfo.innerHTML = "Thor is a fictional superhero appearing in American comic books published by Marvel Comics. The character, based on the Norse mythological deity of the same name, is the Asgardian god of thunder and possesses the enchanted hammer Mjolnir, which grants him the ability of flight and weather manipulation amongst his other superhuman attributes.";
+            }
+            
+            fiveImg.onclick = function(){
+                heroImg.style.backgroundImage = "url("+ fiveImg.src +")";
+                heroTitle.innerHTML = "Iron Fist";
+                heroInfo.innerHTML = "Iron Fist (Daniel "+"Danny"+" Rand) is a fictional superhero appearing in American comic books published by Marvel Comics. Created by Roy Thomas and Gil Kane, Iron Fist first appeared in Marvel Premiere #15 (May 1974). The character is a practitioner of martial arts and the wielder of a mystical force known as the Iron Fist, which allows him to summon and focus his chi. He starred in his own solo series in the 1970s, and shared the title Power Man and Iron Fist for several years with Luke Cage, partnering with Cage to form the superhero team Heroes for Hire. The character has starred in numerous solo titles since, including The Immortal Iron Fist, which expanded on his origin story and the history of the Iron Fist.";
+            }
+            
+            sixImg.onclick = function(){
+                heroImg.style.backgroundImage = "url("+ sixImg.src +")";
+                heroTitle.innerHTML = "Hawkeye";
+                heroInfo.innerHTML = "Hawkeye (Clint Barton) is a fictional superhero appearing in American comic books published by Marvel Comics. Created by writer Stan Lee and artist Don Heck, the character first appeared as a villain in Tales of Suspense #57 (Sept. 1964) and later joined the Avengers in The Avengers #16 (May 1965). He has been a prominent member of the team ever since. He was also ranked at #44 on IGN's Top 100 Comic Book Heroes list.";
+            }
+            
+            sevenImg.onclick = function(){
+                heroImg.style.backgroundImage = "url("+ sevenImg.src +")";
+                heroTitle.innerHTML = "Emma Frost";
+                heroInfo.innerHTML = "Emma Grace Frost is a fictional character appearing in American comic books published by Marvel Comics, most commonly in association with the X-Men. The character first appeared in Uncanny X-Men #129 (January 1980), and was created by writer Chris Claremont and artist/co-writer John Byrne. Emma Frost, also known as the White Queen, has evolved from a supervillain and foe of the X-Men, to becoming a superhero and one of the X-Men's most central members and leaders.";
+            }
+            
+            eightImg.onclick = function(){
+                heroImg.style.backgroundImage = "url("+ eightImg.src +")";
+                heroTitle.innerHTML = "Nova (Richard Rider)";
+                heroInfo.innerHTML = "Nova (Richard Rider) is a fictional superhero appearing in American comic books published by Marvel Comics. The character appeared historically as the star of his own series, and at other times, as a supporting character in team books such as The New Warriors. He is a member of the intergalactic police force known as the Nova Corps, for which he gained superhuman abilities including enhanced strength, flight and resistance to injury.";
+            }
+    
+            var i = 0;
+            
+            gearImg.onclick = function(){
+                i += 1;
+                if ((i % 2) == 1) {
+                    inputBlock.style.display = "initial";
+                } else {
+                    inputBlock.style.display = "none";
+                }
+                
+                nineImg.onclick = function(){
+                    i += 1;
+                    inputBlock.style.display = "none";
+                    var newSpacer = document.createElement("div");
+                    newSpacer.className = "hspacer";
+                    topDiv.appendChild(newSpacer);
+                    
+                    var newImg = document.createElement("img");
+                    newImg.src = nineImg.src;
+                    newImg.className = "herothumb";
+                    heroTitle.innerHTML = inputTitle.value;
+                    heroInfo.innerHTML = inputDesc.value;
+                    topDiv.appendChild(newImg);
+                    heroImg.style.backgroundImage = "url("+ newImg.src +")";
+                    
+                    newImg.onclick = function(){
+                        heroImg.style.backgroundImage = "url("+ newImg.src +")";
+                        heroTitle.innerHTML = inputTitle.value;
+                        heroInfo.innerHTML = inputDesc.value;
+                    }
+                }
+                
+                tenImg.onclick = function(){
+                    i += 1;
+                    inputBlock.style.display = "none";
+                    var newSpacer = document.createElement("div");
+                    newSpacer.className = "hspacer";
+                    botDiv.appendChild(newSpacer);
+                    
+                    var newerImg = document.createElement("img");
+                    newerImg.src = tenImg.src;
+                    newerImg.className = "herothumb";
+                    heroTitle.innerHTML = inputTitle.value;
+                    heroInfo.innerHTML = inputDesc.value;
+                    botDiv.appendChild(newerImg);
+                    heroImg.style.backgroundImage = "url("+ newerImg.src +")";
+                    
+                    newerImg.onclick = function(){
+                        heroImg.style.backgroundImage = "url("+ newerImg.src +")";
+                        heroTitle.innerHTML = inputTitle.value;
+                        heroInfo.innerHTML = inputDesc.value;
+                    }
+                }
+            }
+            
+            
+            cusBut.onclick = function(){
+                cusInput.style.display = "initial";
+                cusBut.innerHTML = "Add Custom Image";
+                cusBut.onclick = function(){
+                    cusInput.style.display = "none";
+                    cusBut.innerHTML = "Custom Image";
+                    nineImg.src = cusInput.value;
+                }
+            }
+            
+        </script>
+    </body>
+    
+</html>
